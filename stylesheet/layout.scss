@@ -1,0 +1,26 @@
+
+// Required
+@import "../scss/functions.scss";
+@import "helper/variables.scss";   
+@import "../scss/mixins";   
+
+// Optional
+@import "../scss/reboot";
+@import "../scss/grid";
+@import "../scss/navbar";
+@import "../scss/utilities";
+@import "../scss/pagination";
+@import "../scss/buttons";  
+
+.bg-cover{  
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+.write-v{
+  writing-mode: vertical-rl;  
+}
+.write-h{
+  writing-mode: horizontal-tb;  
+}

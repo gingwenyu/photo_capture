@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>layout</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!--<link rel="stylesheet" href="stylesheet/layout.css"> -->
+    <link rel="stylesheet" href="stylesheet/index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+        crossorigin="anonymous">
+</head>
+<body>  
+    <!--header-->
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div class="header container d-flex justify-content-between align-items-center flex-nowrap px-0">
+            <a class="navbar-brand py-6 d-flex order-2 order-md-1" href="#">
+                <!--order-2 order-md-1-->
+                <img class='d-none d-md-inline-block order-0 order-md-1' src="image/camera/photocapture-logo1.png" style='width:320px;height:50px;'>
+                <img class='d-inline-block d-md-none order-2 order-md-0' src="image/camera/photocapture-logo1.png" style='width:200px;height: 30px;'>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <!--order-1 order-md-0-->
+                <span class="navbar-toggler-icon order-1 order-md-0" style='width:24px;height:24px;'></span>
+            </button>
+    
+            <div class="navbar-collapse order-md-2 order-1 collapse " id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active px-4">
+                        <a class="nav-link text-dark2" href="./index.html">首頁</a>
+                    </li>
+                    <li class="nav-item px-4">
+                        <a class="nav-link text-dark2" href="./product.html">相機</a>
+                    </li>
+                    <li class="nav-item px-4">
+                        <a class="nav-link text-dark2" href="./login.html">登入</a>
+                    </li>
+                </ul>
+            </div>
+            <a class="nav-link d-flex align-items-center justify-content-end pl-10 pr-0 order-3" href="./cart.html">
+                <i class="fas fa-shopping-cart text-dark2"></i>
+            </a>
+        </div>
+    </nav>
+    <!--header end-->
+
+    <!--footer-->
+    <section class="bg-dark2 mx-auto">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-5 align-items-center flex-nowrap d-flex flex-row justify-content-center justify-content-md-start">
+                    <img class="my-7 mr-4" src="image/camera/photocapture-logo2.png" style='width:65px;height:40px;'>
+                    <h4 class="text-light py-8 mb-0">訂閱最新相機情報</h4>
+                </div>
+                <div class="col-md-5">
+                    <form class="form-inline d-flex flex-nowrap justify-content-md-start justify-content-center">
+                        <div class="form-group">
+                            <label for="email" class="sr-only">email</label>
+                            <!--<i class="far fa-envelope fa-2x" style="color:#3F5D45;"></i>-->
+                            <input type="email" class="form-control bg-light2 my-md-6 mt-0 mb-4 rounded-0" id="email"
+                                placeholder="888@email.com" style='width:316px;height:56px;border:0;'>
+                            <!--<i class="far fa-envelope"></i>-->
+                        </div>
+                        <button class="btn btn-primary p-0 text-dark2 bg-bright my-md-6 mt-0 mb-4 border-0 rounded-0" style='width:64px;height:56px;'>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="bg-light2">
+            <div class="container row justify-content-center mx-auto">
+                <div class="col-md-5 justify-content-start">
+                    <img class="mt-8" src="image/camera/photocapture-logo3.png" style='width:250px;height:40px;'>
+                    <p class="text-dark2 pb-3 pt-md-11 mt-md-12 my-7">02-1688-1968<br>photocapture@email.com<br>100 台北市博愛路
+                        888 號</p>
+                    <div class='d-flex align-items-end'>
+                        <i class="fab fa-facebook fa-2x text-dark2 pr-3"></i>
+                        <i class="fab fa-instagram fa-2x text-dark2"></i>
+                    </div>
+                    <p class="text-dark2 d-inline-flex align-self-end d-md-none flex-nowrap my-0">© 2019 PHOTOCAPTURE* All
+                        Rights
+                        Reserved</p>
+                </div>
+                <div class="col-md-5 d-flex justify-content-end">
+                    <div class='d-flex flex-column'>
+                        <div class='d-flex flex-row-reverse'>
+                            <img class="mt-6 mb-9 d-md-flex d-none" src="image/camera/最好的相機是-需要時在你手邊的那台.png" style='width:75px;height:320px;'>
+                        </div>
+                        <p class="text-dark2 align-self-end d-md-inline-flex d-none flex-nowrap mt-4">© 2019 PHOTOCAPTURE*
+                            All Rights
+                            Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--footer end-->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous">
+    </script>
+
+    
+
+</body>
+</html>

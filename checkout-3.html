@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>checkout-3</title>
+  <link rel="stylesheet" href="css/bootstrap.css"> <!---->
+  <link rel="stylesheet" href="stylesheet/index.css">
+  <!--<link rel="stylesheet" href="stylesheet/checkout.css">-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+    crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <!--header-->
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <div class="header container d-flex justify-content-between align-items-center flex-nowrap px-0">
+      <a class="navbar-brand py-6 d-flex order-2 order-md-1" href="#">
+        <!--order-2 order-md-1-->
+        <img class='d-none d-md-inline-block order-0 order-md-1' src="image/camera/photocapture-logo1.png" style='width:320px;height:50px;'>
+        <img class='d-inline-block d-md-none order-2 order-md-0' src="image/camera/photocapture-logo1.png" style='width:200px;height: 30px;'>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <!--order-1 order-md-0-->
+        <span class="navbar-toggler-icon order-1 order-md-0" style='width:24px;height:24px;'></span>
+      </button>
+  
+      <div class="navbar-collapse order-md-2 order-1 collapse " id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active px-4">
+            <a class="nav-link text-dark2" href="./index.html">首頁</a>
+          </li>
+          <li class="nav-item px-4">
+            <a class="nav-link text-dark2" href="./product.html">相機</a>
+          </li>
+          <li class="nav-item px-4">
+            <a class="nav-link text-dark2" href="./login.html">登入</a>
+          </li>
+        </ul>
+      </div>
+      <a class="nav-link d-flex align-items-center justify-content-end pl-10 pr-0 order-3" href="./cart.html">
+        <i class="fas fa-shopping-cart text-dark2"></i>
+      </a>
+    </div>
+  </nav>
+  <!--header end-->
+
+  <div class="">
+    <div class="container" style="max-width:780px;">
+      <div class="row">
+        <div class="col-md-7 mt-md-6 mt-0">
+          <div class="card rounded-0">            
+            <div class="card-body text-light bg-dark2 p-6">
+              <div class="d-flex">
+                <p class="h2 pb-6">發票</p>
+                <img class="ml-auto mt-2" src="image/camera/progress3.png" style="width:190px;height:23px;">
+              </div>
+              <div class="btn-group" role="group">
+                <button type="button" id="electbtn" class="btn btn-outline-light2 rounded-0 px-10 py-3 active" >電子發票</button>
+                <button type="button" id="postbtn" class="btn btn-outline-light2 rounded-0 px-10 py-3">郵寄發票</button>                
+              </div>
+              <form> 
+                <div id="electForm">
+                  <div class="form-group" id="emailbox">
+                    <label for="" class="mt-6">電子郵件信箱</label>
+                    <input type="email" class="form-control rounded-0 placeholderCus p-5" id="" placeholder="example@email.com">
+                  </div>
+                  <div class="form-group">
+                    <label for="">統一編號（選填）</label>
+                    <input type="number" class="form-control rounded-0 placeholderCus p-5" id="" placeholder="12345678">
+                  </div>
+                </div>
+                
+                <div id="postForm">                    
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="inputCity" class="mt-5">地址</label>     
+                        <input type="checkbox" name="" value="" class="h6"><small>同運送地址</small>
+                        <input type="text" class="form-control rounded-0 placeholderCus p-5" id="inputCity" placeholder="高雄市">                        
+                      </div>
+                      <div class="form-group col-md-6 mt-md-12">                        
+                        <input type="text" class="form-control rounded-0 placeholderCus p-5" id="" placeholder="新興區">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control rounded-0 placeholderCus p-5" id="" placeholder="光明路 520 號">
+                    </div>                    
+                    
+                    <div class="form-group">
+                      <label for="">統一編號（選填）</label>
+                      <input type="number" class="form-control rounded-0 placeholderCus p-5" id="" placeholder="12345678">
+                    </div>
+
+                </div>
+              
+
+              </form>
+            </div>
+            <button class="btn btn-bright btn-next h4 text-dark2 rounded-0 border-0 p-3" onclick="window.location.href='./success.html'">
+              <strong>下一步</strong>
+            </button> 
+          </div>
+        </div>
+        <div class="col-md-5 d-md-block d-none mt-md-6 mt-0 mb-12">          
+            <div class="card rounded-0 bg-light text-dark">
+              <p class="h4 py-3 text-center bg-light2">訂單摘要</p>
+              <div class="card-body py-3 px-4">
+                <p class="h6 pt-2 d-flex">小計<span class="ml-auto">NT$ 2,700</span></p>
+                <p class="h6 pt-2 d-flex">運費<span class="ml-auto">NT$ 300</span></p>
+                <p class="h5 py-3 d-flex font-weight-bold">總計<span class="ml-auto">NT$ 3,000</span></p>
+              </div>             
+            </div>
+
+            <div class="card rounded-0 bg-light text-dark">
+              <p class="h4 py-3 text-center bg-light2">購物清單</p>
+              <div class="card-body pt-3 pb-0 px-4 d-flex">
+                <div class="bg-cover" style="background-image:url(https://images.unsplash.com/photo-1521987896239-1b55d5c7ca77?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80);width:140px;height:80px;"></div>
+                <div class="pl-3">
+                  <p class="h6 m-0">PHANTOM 3 PRO（1）</p>
+                  <p class="h5"><strong>NT$ 15000</strong></p>
+                </div>
+              </div>
+            
+              <div class="card-body pt-3 pb-0 px-4 d-flex">
+                <div class="bg-cover" style="background-image:url(https://images.unsplash.com/photo-1496335713109-efe2094dbeb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);width:120px;height:80px;"></div>
+                <div class="pl-3">
+                  <p class="h6 m-0">NIKON 微單眼（1）</p>
+                  <p class="h5"><strong>NT$ 12800</strong></p>
+                </div>
+              </div>
+            
+              <div class="card-body py-3 px-4 d-flex">
+                <div class="bg-cover" style="background-image:url(https://images.unsplash.com/photo-1474376700777-eb547d9bed2f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80);width:215px;height:80px;"></div>
+                <div class="pl-3">
+                  <p class="h6 m-0">Canon EF-S 17-85mm F4-5.6（1）</p>
+                  <p class="h5"><strong>NT$ 4500</strong></p>
+                </div>
+              </div>
+            </div>
+          
+        </div>  
+      </div>
+    </div>
+  </div>
+
+  <!--footer-->
+  <section class="bg-dark2 mx-auto">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-5 align-items-center flex-nowrap d-flex flex-row justify-content-center justify-content-md-start">
+          <img class="my-7 mr-4" src="image/camera/photocapture-logo2.png" style='width:65px;height:40px;'>
+          <h4 class="text-light py-8 mb-0">訂閱最新相機情報</h4>
+        </div>
+        <div class="col-md-5">
+          <form class="form-inline d-flex flex-nowrap justify-content-md-start justify-content-center">
+            <div class="form-group">
+              <label for="email" class="sr-only">email</label>
+              <!--<i class="far fa-envelope fa-2x" style="color:#3F5D45;"></i>-->
+              <input type="email" class="form-control bg-light2 my-md-6 mt-0 mb-4 rounded-0" id="email" placeholder="888@email.com"
+                style='width:316px;height:56px;border:0;'>
+              <!--<i class="far fa-envelope"></i>-->
+            </div>
+            <button class="btn btn-primary p-0 text-dark2 bg-bright my-md-6 mt-0 mb-4 border-0 rounded-0" style='width:64px;height:56px;'>
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+    <div class="bg-light2">
+      <div class="container row justify-content-center mx-auto">
+        <div class="col-md-5 justify-content-start">
+          <img class="mt-8" src="image/camera/photocapture-logo3.png" style='width:250px;height:40px;'>
+          <p class="text-dark2 pb-3 pt-md-11 mt-md-12 my-7">02-1688-1968<br>photocapture@email.com<br>100 台北市博愛路 888 號</p>
+          <div class='d-flex align-items-end'>
+            <i class="fab fa-facebook fa-2x text-dark2 pr-3"></i>
+            <i class="fab fa-instagram fa-2x text-dark2"></i>
+          </div>
+          <p class="text-dark2 d-inline-flex align-self-end d-md-none flex-nowrap my-0">© 2019 PHOTOCAPTURE* All Rights
+            Reserved</p>
+        </div>
+        <div class="col-md-5 d-flex justify-content-end">
+          <div class='d-flex flex-column'>
+            <div class='d-flex flex-row-reverse'>
+              <img class="mt-6 mb-9 d-md-flex d-none" src="image/camera/最好的相機是-需要時在你手邊的那台.png" style='width:75px;height:320px;'>
+            </div>
+            <p class="text-dark2 align-self-end d-md-inline-flex d-none flex-nowrap mt-4">© 2019 PHOTOCAPTURE* All Rights
+              Reserved</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--footer end-->
+
+
+
+<script>
+  $(document).ready(function () {  
+    $("#postForm").hide("1000");
+
+    $("#electbtn").click(function () { 
+      $("#postbtn").removeClass("active");
+      $("#electbtn").addClass("active");
+      $("#postForm").hide("1000");       
+      $("#electForm").show("1000");
+    });
+
+    $("#postbtn").click(function () {
+      $("#electbtn").removeClass("active");  
+      $("#postbtn").addClass("active"); 
+      $("#electForm").hide("1000");
+      $("#postForm").show("1000");
+    });
+    
+  });
+</script>  
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+  crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
