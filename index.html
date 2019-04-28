@@ -10,6 +10,15 @@
   <link rel="stylesheet" href="stylesheet/index.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
     crossorigin="anonymous">
+
+  <!-- jQuery -->  
+  <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+    crossorigin="anonymous"></script>
+
+  <!-- nanogallery2 -->
+  <link href="https://unpkg.com/nanogallery2@2.4.2/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="https://unpkg.com/nanogallery2@2.4.2/dist/jquery.nanogallery2.min.js"></script>
+  
 </head>
 
 <body>  
@@ -145,6 +154,7 @@
       <img src="image/camera/好的照片在於情感的深度-而非景深.png" style="width: 102px;height:432px;">
     </div>
    
+    <!--
     <div class="container row no-gutters px-2 mx-auto text-dark2 text-center mb-md-12 mb-0">
       <div class="card col-md-4 p-2 border-0">
         <div class="bg-cover" style="background-image:url(https://images.unsplash.com/photo-1510317332875-735378a2a7b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80);height:315px;">
@@ -154,7 +164,7 @@
           <img class="heart" src="image/ic-heart-outline.svg">
         </div>
         <div class="card-title bg-light d-inline-flex flex-row flex-nowrap justify-content-between">
-          <!--p-2 mb-1-->
+          
           <h5 class="px-2 pt-2">Nikon D810單機身</h5>
           <h5 class="px-2 pt-2"><strong>NT$ 58000</strong></h5>
         </div>        
@@ -169,13 +179,13 @@
           <img class="heart" src="image/ic-heart-outline.svg">
         </div>
         <div class="card-title bg-light d-inline-flex flex-row flex-nowrap justify-content-between">
-          <!--p-2 mb-1-->
+          
           <h5 class="px-2 pt-2">KONICA Auto S3</h5>
           <h5 class="px-2 pt-2"><strong>NT$ 7000</strong></h5>
         </div>        
         <button class="btn btn-light2 btn-next text-dark2 py-3 btn-h4 font-weight-bold rounded-0">加入購物車</button>
       </div>
-
+  
       <div class="card col-md-4 p-2 border-0">
         <div class="bg-cover" style="background-image:url(https://images.unsplash.com/photo-1541074014923-0e4a6b452170?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80);height:315px;">
           <div class="tag bg-dark2">
@@ -184,13 +194,19 @@
           <img class="heart" src="image/ic-heart-outline.svg">
         </div>
         <div class="card-title bg-light d-inline-flex flex-row flex-nowrap justify-content-between">
-          <!--p-2 mb-1-->
+          
           <h5 class="px-2 pt-2">Sony A73 Kit組<br>[含28-70mm鏡頭]</h5>
           <h5 class="px-2 pt-2"><strong>NT$ 58,600</strong></h5>
         </div>        
         <button class="btn btn-light2 btn-next text-dark2 py-3 btn-h4 font-weight-bold rounded-0">加入購物車</button>
       </div>
     </div>
+    -->
+
+    <!-- ### position of the gallery ### --><!--testing-->
+    <div class="container mb-md-12" id="nanogallery2">
+     
+    </div> 
 
     <!--footer-->
     <section class="bg-dark2 mx-auto">
@@ -224,7 +240,7 @@
           <div class="col-md-5 justify-content-start">
             <img class="mt-8" src="image/camera/photocapture-logo3.png" style='width:250px;height:40px;'>
             <p class="text-dark2 pb-3 pt-md-11 mt-md-12 my-7">02-1688-1968<br>photocapture@email.com<br>100 台北市博愛路 888 號</p>
-            <div class='d-flex align-items-end'>
+            <div class='d-flex align-items-end mt-md-22'>
               <i class="fab fa-facebook fa-2x text-dark2 pr-3"></i>
               <i class="fab fa-instagram fa-2x text-dark2"></i>                             
             </div>
@@ -245,8 +261,34 @@
     </footer>
     <!--footer end-->
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"></script>
+    <script>
+      jQuery(document).ready(function () {
+
+        jQuery("#nanogallery2").nanogallery2({
+          // ### gallery settings ### 
+          thumbnailHeight: 315,
+          thumbnailWidth: 'auto',          
+          thumbnailAlignment : 'center',
+          thumbnailToolbarImage: { topLeft: 'cart' },        
+          icons: { 
+            thumbnailCart: '<i class="fas fa-shopping-cart text-light2 fa-2x"></i>',   
+          },
+          thumbnail: { background: '#444', backgroundImage: 'linear-gradient(315deg, #111 0%, #557 90%)', borderColor: '#fceb02', labelOpacity: 1, labelBackground: 'rgba(34, 34, 34, 0)', titleColor: '#eee', titleBgColor: 'rgba(0, 0, 0, 0.7)', titleShadow: '', descriptionColor: '#ccc', descriptionBgColor: 'rgba(0, 0, 0, 0.7)', descriptionShadow: '', stackBackground: '#aaa' },
+          // ### gallery content ### 
+          items: [
+            { src: 'http://bit.ly/2ZGZFWY ', srct: 'http://bit.ly/2ZGZFWY ', title: 'RED PRO 5.0, NT$ 99,999' },            
+            { src: 'http://bit.ly/2ZEZjQO ', srct: 'http://bit.ly/2ZEZjQO ', title: 'KONICA Auto S3, NT$ 7000' },  
+            { src: 'http://bit.ly/2ZCRdbf ', srct: 'http://bit.ly/2ZCRdbf ', title: 'Sony A73 Kit組+ 28-70mm, NT$ 58,600' },
+            { src: 'http://bit.ly/2ZFZMlz ', srct: 'http://bit.ly/2ZFZMlz ', title: 'Canon EOS M50雙鏡組, NT$ 22000' },
+            { src: 'http://bit.ly/2ZJPIs7 ', srct: 'http://bit.ly/2ZJPIs7 ', title: 'Canon EOS M100+ 15-45mm, NT$ 13000' },
+            { src: 'http://bit.ly/2ZD9pBC ', srct: 'http://bit.ly/2ZD9pBC ', title: 'Nikon F3 50mm F1.4, NT$ 13900' },      
+          ]
+        });
+      });
+    </script>
+         
+   
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
       crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
